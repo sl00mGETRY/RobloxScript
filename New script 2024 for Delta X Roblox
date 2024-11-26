@@ -18,7 +18,7 @@ TextLabel.BackgroundTransparency = 1
 TextLabel.TextColor3 = Color3.new(1, 0, 0)
 TextLabel.Font = Enum.Font.SourceSansBold
 TextLabel.TextSize = 40
-TextLabel.Text = "You were kicked by the team sl00mGETRY, stupid hacker!"
+TextLabel.Text = "stupid idiot hahahaha"
 
 local sound = Instance.new("Sound")
 sound.SoundId = "rbxassetid://9043356686"
