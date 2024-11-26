@@ -1,0 +1,41 @@
+local Player = game.Players.LocalPlayer
+local ScreenGui = Instance.new("ScreenGui")
+local TextLabel = Instance.new("TextLabel")
+local Frame = Instance.new("Frame")
+
+ScreenGui.Parent = Player:WaitForChild("PlayerGui")
+ScreenGui.Name = "FakeCheat"
+
+Frame.Parent = ScreenGui
+Frame.Size = UDim2.new(0.4, 0, 0.4, 0)
+Frame.Position = UDim2.new(0.3, 0, 0.3, 0)
+Frame.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+
+TextLabel.Parent = Frame
+TextLabel.Size = UDim2.new(1, 0, 1, 0)
+TextLabel.Position = UDim2.new(0, 0, 0, 0)
+TextLabel.BackgroundTransparency = 0
+TextLabel.TextColor3 = Color3.new(0, 1, 0)
+TextLabel.Font = Enum.Font.SourceSansBold
+TextLabel.TextSize = 20
+TextLabel.Text = "Cheat Activated! Loading hacks..."
+
+wait(2)
+TextLabel.Text = "All hacks loaded. Have fun!"
+
+wait(5)
+TextLabel.Text = "ERROR: Unauthorized Access Detected!"
+
+local Character = Player.Character or Player.CharacterAdded:Wait()
+local Humanoid = Character:WaitForChild("Humanoid")
+
+while true do
+    Humanoid.WalkSpeed = math.random(0, 50)
+    Humanoid.JumpPower = math.random(0, 100)
+    TextLabel.TextColor3 = Color3.new(math.random(), math.random(), math.random())
+    Frame.BackgroundColor3 = Color3.new(math.random(), math.random(), math.random())
+    wait(0.5)
+end
+
+wait(30)
+Player:Kick("You were kicked by the sl00mGETRY team.")
